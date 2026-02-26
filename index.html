@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy Go - Freshness You Can Trust</title>
+    <meta name="description"
+        content="Pure Desi Dairy, Delivered Fresh. 100% pure cow milk, desi ghee, paneer, and more. From Village Gehli to Your Home.">
+    <meta name="google-site-verification" content="H6tnRNjs0LGTTBvZtAMk3U5IwulCLFvkh4__h8YZL0s" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Dairy <span>Go</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/918813911566?text=Hello%20Dairy%20Go,%20I%20have%20an%20inquiry." target="_blank"
+                class="nav-btn">
+                <i class="fab fa-whatsapp"></i> Chat Now
+            </a>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Pure Desi Dairy,<br>Delivered <span class="text-gradient">Fresh</span></h1>
+                <p class="hero-subtitle">From Village Gehli to Your Home. <br> Freshness You Can Trust.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary whatsapp-order" data-product="a custom order">
+                        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                    </button>
+                    <a href="#products" class="btn btn-secondary">View Products</a>
+                </div>
+            </div>
+            <!-- The 3D model will take up the right side via fixed canvas + GSAP -->
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features section-padding">
+            <div class="section-header">
+                <h2>Why Choose <span class="text-gradient">Dairy Go</span>?</h2>
+                <p>We believe in purity, tradition, and health.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card glass3d">
+                    <div class="feature-icon"><i class="fas fa-cow"></i></div>
+                    <h3>100% Pure Cow Milk</h3>
+                    <p>Sourced directly from our own healthy desi cows.</p>
+                </div>
+                <div class="feature-card glass3d">
+                    <div class="feature-icon"><i class="fas fa-truck-fast"></i></div>
+                    <h3>Fresh Daily Delivery</h3>
+                    <p>Milked fresh and delivered to your doorstep within hours.</p>
+                </div>
+                <div class="feature-card glass3d">
+                    <div class="feature-icon"><i class="fas fa-flask-vial"></i></div>
+                    <h3>No Chemicals</h3>
+                    <p>Zero preservatives, zero adulteration. Just pure nature.</p>
+                </div>
+                <div class="feature-card glass3d">
+                    <div class="feature-icon"><i class="fas fa-hands-holding-circle"></i></div>
+                    <h3>Traditional Methods</h3>
+                    <p>Processed using authentic desi methods for maximum nutrition.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products section-padding">
+            <div class="section-header">
+                <h2>Our <span class="text-gradient">Premium Products</span></h2>
+                <p>Taste the richness of traditional village dairy</p>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card glass">
+                    <div class="product-img-container">
+                        <img src="images/fresh_cow_milk.png" alt="Fresh Cow Milk" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Cow Milk</h3>
+                        <p class="product-desc">Pure, unprocessed, and highly nutritious fresh cow milk delivered daily.
+                        </p>
+                        <div class="price-controls">
+                            <select class="variant-select">
+                                <option value="1L Fresh Cow Milk">1L - ₹80</option>
+                                <option value="500ml Fresh Cow Milk">500ml - ₹40</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100 whatsapp-dynamic-order">
+                            <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card glass">
+                    <div class="product-img-container">
+                        <img src="images/desi_ghee.png" alt="Desi Ghee" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Desi Ghee</h3>
+                        <p class="product-desc">Authentic bilona desi ghee with rich aroma and golden texture.</p>
+                        <div class="price-controls">
+                            <select class="variant-select">
+                                <option value="1L Desi Ghee">1L - ₹1200</option>
+                                <option value="500ml Desi Ghee">500ml - ₹620</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100 whatsapp-dynamic-order">
+                            <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card glass">
+                    <div class="product-img-container">
+                        <img src="images/fresh_curd.png" alt="Curd (Dahi)" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Curd (Dahi)</h3>
+                        <p class="product-desc">Thick, creamy, and probiotic-rich fresh homemade curd.</p>
+                        <div class="price-controls">
+                            <select class="variant-select">
+                                <option value="1kg Curd (Dahi)">1kg - ₹100</option>
+                                <option value="500g Curd (Dahi)">500g - ₹50</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100 whatsapp-dynamic-order">
+                            <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card glass">
+                    <div class="product-img-container">
+                        <img src="images/fresh_lassi.png" alt="Fresh Lassi" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Lassi</h3>
+                        <p class="product-desc">Refreshing, traditional desi lassi to keep you cool and healthy.</p>
+                        <div class="price-controls">
+                            <select class="variant-select">
+                                <option value="1L Fresh Lassi">1L - ₹60</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100 whatsapp-dynamic-order">
+                            <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card glass">
+                    <div class="product-img-container">
+                        <img src="images/white_butter.png" alt="White Butter" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>White Butter</h3>
+                        <p class="product-desc">Freshly churned pure white butter directly from our farm.</p>
+                        <div class="price-controls">
+                            <select class="variant-select">
+                                <option value="500g White Butter">500g - ₹450</option>
+                                <option value="250g White Butter">250g - ₹230</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100 whatsapp-dynamic-order">
+                            <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card glass">
+                    <div class="product-img-container">
+                        <img src="images/soft_paneer.png" alt="Soft Paneer" class="product-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Soft Paneer</h3>
+                        <p class="product-desc">Extremely soft, fresh, and high-protein malai paneer.</p>
+                        <div class="price-controls">
+                            <select class="variant-select">
+                                <option value="1kg Soft Paneer">1kg - ₹400</option>
+                                <option value="500g Soft Paneer">500g - ₹210</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary w-100 whatsapp-dynamic-order">
+                            <i class="fab fa-whatsapp"></i> Order Now on WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="about section-padding">
+            <div class="about-container glass">
+                <div class="about-content">
+                    <h2>Our <span class="text-gradient">Story</span></h2>
+                    <h3>From Village Gehli to Your Home</h3>
+                    <p>Dairy Go started with a simple vision: to bring the authentic, pure taste of traditional Haryana
+                        dairy to modern households. Originating from the lush surroundings of Village Gehli, we have
+                        maintained our roots while adopting ultra-hygienic processing methods.</p>
+
+                    <div class="mission-vision">
+                        <div class="mv-box">
+                            <i class="fas fa-bullseye text-gradient"></i>
+                            <h4>Our Mission</h4>
+                            <p>Provide pure, unadulterated desi dairy to every home, promoting health and wellness.</p>
+                        </div>
+                        <div class="mv-box">
+                            <i class="fas fa-eye text-gradient"></i>
+                            <h4>Our Vision</h4>
+                            <p>Become Haryana’s most trusted and beloved dairy brand with zero compromise on quality.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hygiene-promise">
+                        <h4><i class="fas fa-shield-halved"></i> Hygiene & Quality Promise</h4>
+                        <p>Our processing facilities undergo strict daily sanitization. Every drop of milk is tested for
+                            purity before reaching you.</p>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <!-- 3D Village / Farm representation or floating glass elements -->
+                    <div class="floating-shapes">
+                        <div class="shape shape-1 glass3d"></div>
+                        <div class="shape shape-2 glass3d"></div>
+                        <div class="shape shape-3 glass3d"></div>
+                        <div class="about-badge glass3d">
+                            <h3>100%</h3>
+                            <p>Pure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials section-padding">
+            <div class="section-header">
+                <h2>Loved by <span class="text-gradient">Local Families</span></h2>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-card glass3d">
+                    <div class="stars">★★★★★</div>
+                    <p>"The best quality milk I've ever had. Reminds me of my village days. Pure nostalgia!"</p>
+                    <h4>- Rajesh Sharma</h4>
+                </div>
+                <div class="testimonial-card glass3d">
+                    <div class="stars">★★★★★</div>
+                    <p>"Dairy Go's Ghee has the perfect aroma and texture. Highly recommended for daily use."</p>
+                    <h4>- Meena Yadav</h4>
+                </div>
+                <div class="testimonial-card glass3d">
+                    <div class="stars">★★★★★</div>
+                    <p>"Delivery is always on time and the paneer is incredibly soft. Trust them completely."</p>
+                    <h4>- Amit Kumar</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section-padding">
+            <div class="section-header">
+                <h2>Get in <span class="text-gradient">Touch</span></h2>
+                <p>We are just a message away.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info glass">
+                    <h3>Contact Information</h3>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Address</strong>
+                                <p>Village Gehli, Tehsil Narnaul,<br>Mahendragarh, Haryana – 123001<br>Near Sati Mata
+                                    Mandir</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Phone / WhatsApp</strong>
+                                <p><a href="https://wa.me/918813911566">+91 8813911566</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:ashgaming8813@gmail.com">ashgaming8813@gmail.com</a></p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="map-container">
+                        <!-- Embed Google Map representing Narnaul/Gehli area -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3514.8239082728445!2d76.10825317537618!3d28.243031075880198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3912bf2dbaf1bb81%3A0x6bba66175e117498!2sGehli%2C%20Haryana%20123001!5e0!3m2!1sen!2sin!4v1692257256561!5m2!1sen!2sin"
+                            width="100%" height="200" style="border:0; border-radius: 12px;" allowfullscreen=""
+                            loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="contact-form glass3d-form">
+                    <h3>Send us a Message</h3>
+                    <form id="whatsappForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required placeholder="+91 XXXXXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" rows="4" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content glass-footer">
+            <div class="footer-brand">
+                <h2>Dairy <span>Go</span></h2>
+                <p>Freshness You Can Trust.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/918813911566"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dairy Go. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918813911566?text=Hello%20Dairy%20Go,%20I%20want%20to%20order%20your%20product"
+        target="_blank" class="floating-wa">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP for Smooth Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="main.js"></script>
+    <script src="three-scene.js"></script>
+</body>
+
+</html>
