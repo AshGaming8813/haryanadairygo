@@ -107,6 +107,18 @@ h6 {
   margin: 0 auto;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
 .logo h1 {
   font-size: 2rem;
   color: var(--text-dark);
